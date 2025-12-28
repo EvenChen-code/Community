@@ -172,4 +172,9 @@ public class UserService implements CommunityConstant {
     public LoginTicket findLoginTicket(String ticket) {
         return loginTicketMapper.selectByTicket(ticket);
     }
+
+    // 更新修改头像的路径
+    public int updataHeader(int userId,String headerUrl) {
+        return userMapper.updateHeader(userId,headerUrl);
+    }
 }
